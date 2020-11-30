@@ -33,15 +33,20 @@
 
             const getIDs = new Promise((resolve, reject) => {
                 setTimeout(()=> {
-                    resolve([328, 394, 9298, 235,])
-
+                    reject([328, 394, 9298, 235,]);
                 }, 1500);
             });
             
-            getIDs.then(IDs => {
+
+            getIDs.
+            then(IDs => {
                 console.log(IDs);
+            })
+            
+            .catch(error => {
+                console.log('error');
             });
-        
+
     </script>
 </body>
 </html>
