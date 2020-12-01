@@ -31,21 +31,84 @@
         // }
         // getRecipe();
 
-            const getIDs = new Promise((resolve, reject) => {
-                setTimeout(()=> {
-                    reject([328, 394, 9298, 235,]);
-                }, 1500);
-            });
+            // const getIDs = new Promise((resolve, reject) => {
+            //     setTimeout(()=> {
+            //         resolve([328, 394, 9298, 235,]);
+            //     }, 1500);
+            // });
             
 
-            getIDs.
-            then(IDs => {
-                console.log(IDs);
-            })
+            // getIDs.
+            // then(IDs => {
+            //     console.log(IDs);
+            // })
             
-            .catch(error => {
-                console.log('error');
-            });
+            // .catch(error => {
+            //     console.log('error');
+            //});
+
+            class Animal {
+                constructor(name, age) {
+                    console.log(`${name} is an  annimal and was created`)
+                    this.name = name;
+                    this.age = age;
+                }
+
+                eat() {
+                    console.log(`${this.name} is eating`);
+                }
+
+                awake() {
+                    console.log(`${this.name} is is awake`);
+                }
+
+                sleep() {
+                    console.log(`${this.name} is sleeping`)
+                }
+            }
+
+            const bobby = new Animal('bobby', 2);
+
+            bobby.eat();
+            bobby.sleep();
+            bobby.awake();
+
+            const marschall = new Animal('marschall', 5);
+
+            marschall.eat();
+            marschall.sleep();
+            marschall.awake();
+
+
+            class Dog extends Animal{
+                constructor(name, age, breed){
+                    super(name, age)
+                    this.breed = breed;
+                }
+
+                logBreed() {
+                    console.log(`${this.name} is a  ${this.breed}`);
+                }
+            }
+
+            const mike = new Dog('mike', 4, 'bulldog');
+            mike.logBreed()
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </script>
 </body>
