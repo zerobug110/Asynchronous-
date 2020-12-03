@@ -10,42 +10,42 @@
     <h1>Asynchronous JavaScript</h1>
 
     <script>
-        // const second = () => {
-        //     setTimeout(()=> {
-        //         console.log('async hey there');
-        //     },2000);
-        // }
+        const second = () => {
+            setTimeout(()=> {
+                console.log('async hey there');
+            },2000);
+        }
 
-        // const first = () => {
-        //     console.log('hey there');
-        //     second();
-        //     console.log('The end');
-        // }
-        // // first();
+        const first = () => {
+            console.log('hey there');
+            second();
+            console.log('The end');
+        }
+        // first();
         
-        // function getRecipe() {
-        //     setTimeout(()=> {
-        //         const recipeID = [34,223,24,234,]
-        //         console.log(recipeID);
-        //     }, 1500);
-        // }
-        // getRecipe();
+        function getRecipe() {
+            setTimeout(()=> {
+                const recipeID = [34,223,24,234,]
+                console.log(recipeID);
+            }, 1500);
+        }
+        getRecipe();
 
-            // const getIDs = new Promise((resolve, reject) => {
-            //     setTimeout(()=> {
-            //         resolve([328, 394, 9298, 235,]);
-            //     }, 1500);
-            // });
+            const getIDs = new Promise((resolve, reject) => {
+                setTimeout(()=> {
+                    resolve([328, 394, 9298, 235,]);
+                }, 1500);
+            });
             
 
-            // getIDs.
-            // then(IDs => {
-            //     console.log(IDs);
-            // })
+            getIDs.
+            then(IDs => {
+                console.log(IDs);
+            })
             
-            // .catch(error => {
-            //     console.log('error');
-            //});
+            .catch(error => {
+                console.log('error');
+            });
 
             class Animal {
                 constructor(name, age) {
@@ -89,25 +89,37 @@
                 logBreed() {
                     console.log(`${this.name} is a  ${this.breed}`);
                 }
+                
             }
 
             const mike = new Dog('mike', 4, 'bulldog');
             mike.logBreed()
             
+            console.log('***************************')
 
+            const markHeight = 1.69;
+            const markWeights = 78;
 
+            const johnHeight = 1.95;
+            const johnWeights = 92;
+            
 
+            const BMIMark = markWeights / markHeight ** 2
+            const BMIJohn = johnWeights / johnHeight ** 2
 
+            if (BMIMark > BMIJohn) {
+                console.log(`Mark's BMI (${BMIMark}) is great than John's (${BMIJohn})`);
+            } else {
+                console.log(`John's BMI (${BMIJohn}) is great than Mark's (${BMIMark})`);
+            }
+            
+             
+            // console.log(markHeight, ' ', markWeights);
+            // console.log(johnHeight, ' ', johnWeights);
+            // console.log(BMIMark);
+            // console.log(BMIJohn);
 
-
-
-
-
-
-
-
-
-
+            // console.log('is mark BMI higher than john?', markHigherBMI);
 
 
     </script>
